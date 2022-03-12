@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="keywords" content="呱呱,主页,CloudFlare">
+		<meta name="description" content="呱呱CloudFlare加速解析，提供CloudFlare优选节点">
+		<title>呱呱CloudFlare加速解析 - Powered by Gua</title>
+		<link href="./css/style.css" rel="stylesheet">
+		<link href="https://gitee.com/guaee/gua/raw/master/gua_gg/jiasu.png" rel="shortcut icon">
+	</head>
+	<body>
+		<div align="center" class="top">
+			<p class="nickname">呱呱CloudFlare加速解析</p>
+			<p>&nbsp;</p>
+			<ul>
+				<h1>简介</h1>
+				<p>CloudFlare&nbsp;加速解析是&nbsp;<a class="one">呱呱</a>&nbsp;向中国大陆用户提供的公共优化服务</p>
+					<h3>接入服务节点：<a class="one">cf.guaim.cf</a></h3>
+					<p>接入使用方式类似于其它CDN的CNAME接入，可以为中国大陆用户访问Cloudflare网络节点大幅度加速</p>
+					<h4 class="one">加速解析仅用于正经网站，非法网站、搭梯、过假墙请绕道，被污染就不再提供服务了！</h4>
+					<h1>接入教程</h1>
+					<p>1、登陆 www.cloudflare.com ，按网页提示配置域名解析并启用CDN服务，如是Plus、Pro、Business计划，等待生效后进行下一步（Free计划使用 CNAME接入）</p>
+					<p>2、修改域名NS到第三方DNS解析服务商（需支持分区解析，DNS服务商推荐：<a class="one" href="https://aliyun.com">阿里云云解析</a>、<a class="one" href="https://dnspod.cn">Dnspod</a>）</p>
+					<p>3、在第三方DNS解析服务商中每个子域名配置两条DNS解析：
+					       海外（全网默认）线路CNAME解析指向：域名全称.cdn.cloudflare.net（例如：guagua.pw.cdn.cloudflare.net，如不指向，可能会被CloudFlare限制）
+					       国内（中国大陆）所有运营商线路CNAME解析指向：<a class="one">cf.guagua.pw</a></p>
+						   <h1>节点故障反馈</h1>
+						   <h4>QQ：<a class="one" href="https://wpa.qq.com/msgrd?v=3&uin=1515877886&site=qq&menu=yes">1515877886</a></h4>
+						   <h4>TG：<a class="one" href="https://t.me/guayun">guayun</a></h4>
+			</ul>
+			<p class="footer">&copy;呱呱不识字<br><a href="https://icp.gov.moe/?keyword=20220333" target="_blank" style="color:#61677C;">萌ICP备20220333号</a><br>本站已安全运行：<a id="momk"></a></p>
+		</div>
+		<script language="javascript">
+			function show_date_time() {
+				window.setTimeout("show_date_time()", 1000);
+				BirthDay = new Date("2020/05/09 09:30:24");
+				today = new Date();
+				timeold = (today.getTime() - BirthDay.getTime());
+				sectimeold = timeold / 1000
+				secondsold = Math.floor(sectimeold);
+				msPerDay = 24 * 60 * 60 * 1000
+				e_daysold = timeold / msPerDay
+				daysold = Math.floor(e_daysold);
+				e_hrsold = (daysold - e_daysold) * -24;
+				hrsold = Math.floor(e_hrsold);
+				e_minsold = (hrsold - e_hrsold) * -60;
+				minsold = Math.floor((hrsold - e_hrsold) * -60);
+				seconds = Math.floor((minsold - e_minsold) * -60);
+				momk.innerHTML = daysold + "天" + hrsold + "时" + minsold + "分" + seconds + "秒";
+			}
+			show_date_time();
+		</script>
+	</body>
+</html>
